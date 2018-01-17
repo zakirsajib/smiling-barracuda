@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<div class="container">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -24,6 +25,7 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
+		</div>
 	</header><!-- .entry-header -->
 
 	<?php smiling_barracuda_post_thumbnail(); ?>
@@ -50,7 +52,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer container">
 		<?php smiling_barracuda_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

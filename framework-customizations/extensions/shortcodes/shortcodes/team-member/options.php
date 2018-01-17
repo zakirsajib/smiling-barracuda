@@ -16,14 +16,14 @@ $options = array(
 		'value' => ''
 	),
 	'linkedin_image' => array(
-		'label' => __( 'LinkedIn Image/Icon', 'fw' ),
+		'label' => __( 'Social Image/Icon', 'fw' ),
 		'desc'  => __( 'Either upload a new, or choose an existing image from your media library', 'fw' ),
 		'type'  => 'upload',
 		'help'  => esc_html__( 'Example: Recommended size 34px x 34px', 'fw' )
 	),
 	'linkedin_url'   => array(
-		'label' => __( 'Team Member LinkedIn URL', 'fw' ),
-		'desc'  => __( 'Full LinkedIn URL.', 'fw' ),
+		'label' => __( 'Social URL', 'fw' ),
+		'desc'  => __( 'Full Social URL.', 'fw' ),
 		'type'  => 'text',
 		'value' => ''
 	),
@@ -38,5 +38,12 @@ $options = array(
 		'desc'  => __( 'Either upload a new, or choose an existing image from your media library', 'fw' ),
 		'type'  => 'upload',
 		'help'  => esc_html__( 'Example: Recommended size 300px x 300px', 'fw' )
+	),
+	'margin'   => array(
+		'label' => esc_html__( 'Margin for Image', 'fw' ),
+		'desc'  => __( 'Enter your custom margin (<b>top right bottom left</b>)', 'fw' ),
+		'type'  => 'text',
+		'value' => '',
+		'help'  => esc_html__( 'Example: 0px 0px 15px 0px', 'fw' ), 
 	)
 );

@@ -8,7 +8,7 @@ $cfg = array(
 		'popup_size'  => 'medium',
         'title_template' => '
         	<b>{{= title }}</b>
-        	<div class="sh-builder-item-desc">
+        	<div class="item-desc">
 	        	{{ if( typeof o.text != "undefined" && o.text ) { }}
 	        		{{- o.text.replace(/(<([^>]+)>)/ig,"").split(/\s+/, 25).join(" ") }}
 	    		{{ } }}
