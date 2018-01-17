@@ -16,10 +16,6 @@
 .fw-team .fw-team-name p {
 	line-height:1.2;
 }
-.fw-team{
-	cursor:pointer;
-	color:#23355e;
-}
 .fw-team-text{
 	font-weight: 600;
     line-height: 1.25rem;

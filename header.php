@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-spy="scroll" data-target=".navbar" data-offset="90">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'barracuda' ); ?></a>
 	<!--Page Loader-->
@@ -33,11 +33,11 @@
 <!--Page Loader ends-->
 <div class="parallax-content">
     <header>
-    <section class="home-main" id="home">
+    <section>
         <h2 class="sr-only">This is home section</h2>
             <!-- Navigation -->
             <nav class="navbar navbar-default navbar-fixed navbar-fixed-top ">
-                <div class="menu-icon-position">
+                <div class="menu-icon-position hidden-lg hidden-md hidden-sm">
                     <div class="menu-icon">
                         <span></span>
                     </div>

@@ -16,7 +16,7 @@ $(function ($) {
         }, 1000);
     });
 	
-	
+		
 	/*-------------------------------------------------------------------*/
     /*  Makes the height of all selected elements (".match-height")
     /*  exactly equal. Requires jQuery matchHeight plugin.
@@ -47,29 +47,6 @@ $(function ($) {
             $navbar.removeClass("scroll-nav");
         }
     });
-
-    // Push Menus
-    var $menuLeft = $(".pushmenu-left");
-    var $menuRight = $(".pushmenu-right");
-    var $toggleleft = $("open");
-    var $toggleright = $(".home-main-index5  .menu-icon");
-
-    if ($(".home-main-index5  .menu-icon").length) {
-        $("body").addClass("pushmenu-push");
-        $toggleleft.on("click", function () {
-            $(this).toggleClass("active");
-            $(".pushmenu-push").toggleClass("pushmenu-push-toright");
-            $menuLeft.toggleClass("pushmenu-open");
-            return false;
-        });
-        $toggleright.on("click", function () {
-            $(this).toggleClass("active");
-            $(".pushmenu-push").toggleClass("pushmenu-push-toleft");
-            $menuRight.toggleClass("pushmenu-open");
-            return false;
-
-        });
-    } 
     
     $(document).ready(function(){
 	    //Check to see if the window is top if not then display button

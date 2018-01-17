@@ -548,7 +548,7 @@ nav.navbar .brand-center .navbar-toggle{display:inline-block;}
 .programme-table .col-md-3.col-sm-3{padding:1em;}
 .media-left, .media>.pull-left{padding-top:0;}
 }
-@media (min-width:768px){.navbar-right{float:right!important;margin-right:60px;}
+@media (min-width:768px){.navbar-right{float:right!important;}
 #homeform .navbar-right{margin-right:0;}
 }
 @media (max-width:500px){#search-box input[type="search"]{font-size:20px;}
