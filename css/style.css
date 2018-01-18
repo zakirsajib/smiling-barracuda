@@ -1144,6 +1144,19 @@ i.fa.fa-angle-up{
     width: 40px;
     height: 40px;
 }
+.navbar-fixed-top #entry-title h3 {
+    color: #fff;
+    line-height: 7;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.scroll-nav #entry-title h3{
+	color: #23355e;
+	line-height: 3;
+	font-size: 1rem;
+	font-weight: 600;
+}
 
 /*-------------------End ------------*/
 /*------------------- Home section ------------*/
@@ -1232,6 +1245,11 @@ section#programme h2 {
     border: 0;
     border-color: transparent;
 }
+.programme-application-button{
+	position: absolute;
+	right: 0;
+}
+
 /*------------------- End ------------*/
 /*------------------- Team Section ------------*/
 .who-we-are-heading h2 {
@@ -1678,7 +1696,7 @@ p.comment-notes {
     .homeparttwo-text {
     	margin: 0 2em!important;
 	}
-    .programme-application-button {text-align: center;}
+    .programme-application-button {text-align: center; position: relative;}
     .club-left-contents{
     	padding: 5.375rem 0 1.375rem!important;
 	}
