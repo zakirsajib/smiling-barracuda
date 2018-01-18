@@ -214,6 +214,26 @@ function wpcontent_svg_mime_type( $mimes = array() ) {
 }
 add_filter( 'upload_mimes', 'wpcontent_svg_mime_type' );
 /**
+ * TGM Plugin Activation
+ */
+{
+	require_once dirname( __FILE__ ) . '/TGM-Plugin-Activation/class-tgm-plugin-activation.php';
+
+	/** @internal */
+	function _action_theme_register_required_plugins() {
+		tgmpa( array(
+			array(
+				'name'      => 'Unyson',
+				'slug'      => 'unyson',
+				'required'  => true,
+			),
+		) );
+
+	}
+	add_action( 'tgmpa_register', '_action_theme_register_required_plugins' );
+}
+
+/**
 * Change the Login Logo
 */
 function my_login_logo() { ?>

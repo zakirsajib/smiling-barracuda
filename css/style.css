@@ -1734,10 +1734,6 @@ p.comment-notes {
 }
 
 @media only screen and (max-width:414px) {
-    .club-left-contents,
-    .club-right-contents {
-        background-color: #fff;
-    }
     .media-heading {
         margin-top: 15px;
     }
