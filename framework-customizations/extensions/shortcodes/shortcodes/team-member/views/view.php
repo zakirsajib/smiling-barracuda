@@ -43,9 +43,11 @@ if ( !empty( $atts['linkedin_image'] ) ) {
 			$margin = 'margin:' . $atts['margin'] . ';';
 			$section_style = 'style="' . esc_attr($margin) . '"';
 		}
-	?>
+	
+		$img_hover = !empty($atts['image_hover']) ? "{$atts['image_hover']}" : ''; ?>
+	
 	<?php if ( !empty( $atts['image'] )):?>
-		<div class="fw-team-image" <?php echo $section_style; ?>>
+		<div class="fw-team-image <?php echo $img_hover?>" <?php echo $section_style; ?>>
 			<img src="<?php echo esc_attr($image); ?>" alt="<?php echo esc_attr($atts['name']); ?>"/>
 		</div>
 	<?php endif;?>

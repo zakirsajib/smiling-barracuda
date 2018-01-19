@@ -41,10 +41,8 @@
                 <div class="container">
                     <div class="navbar-header">
                         <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-	                        $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" >
-<img src="<?php echo $image[0]?>" class="logo-display" alt="<?php bloginfo( 'name' );?>">
-<img src="<?php echo get_theme_mod('header_logo', 'No Logo has been provided yet.')?>" class="logo-scrolled" alt="<?php bloginfo( 'name' );?>">
-                        </a>
+	                        $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );if(!empty($image)):?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" ><img src="<?php echo $image[0]?>" class="logo-display" alt="<?php bloginfo( 'name' );?>"><img src="<?php echo get_theme_mod('header_logo', 'No Logo has been provided yet.')?>" class="logo-scrolled" alt="<?php bloginfo( 'name' );?>">
+                        </a><?php endif;?>
                     </div>
                     <div class="collapse navbar-collapse" id="entry-title">
                     	<div class="nav navbar-nav navbar-right top10">

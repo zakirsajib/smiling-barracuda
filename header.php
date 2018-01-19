@@ -46,9 +46,10 @@
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
                         <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-	                   $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );?>
+	                   $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	                   if(!empty($image)):?>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" ><img src="<?php echo $image[0]?>" class="logo-display" alt="<?php bloginfo( 'name' );?>"><img src="<?php echo get_theme_mod('header_logo', 'No Logo has been provided yet.')?>" class="logo-scrolled" alt="<?php bloginfo( 'name' );?>">
-                        </a>
+                        </a><?php endif;?>
                     </div>
                     <?php
 			            wp_nav_menu( array(

@@ -39,6 +39,15 @@ $options = array(
 		'type'  => 'upload',
 		'help'  => esc_html__( 'Example: Recommended size 300px x 300px', 'fw' )
 	),
+	'image_hover'  => array(
+		'label'   => __( 'Image Hover effect', 'fw' ),
+		'desc'    => __( 'Add a mouse hover effect to the image', 'fw' ),
+		'type'    => 'select',
+		'choices' => array(
+			'no'      => __('No', 'fw'),
+			'yes' => __( 'Yes, slightly increase the image size', 'fw' ),
+		)
+	),
 	'margin'   => array(
 		'label' => esc_html__( 'Margin for Image', 'fw' ),
 		'desc'  => __( 'Enter your custom margin (<b>top right bottom left</b>)', 'fw' ),

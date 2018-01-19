@@ -3,7 +3,7 @@
 }
 $options = array(
 	'section_class' => array(
-		'label' => __('Section Class', 'fw'),
+		'label' => __('Column Class', 'fw'),
 		'desc'  => __('CSS class name', 'fw'),
 		'type'  => 'text',
 	),

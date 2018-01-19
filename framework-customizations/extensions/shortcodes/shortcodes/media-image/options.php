@@ -20,6 +20,26 @@ $options = array(
 		'value' => '',
 		'help'  => esc_html__( 'Example: 0px 0px 15px 0px', 'fw' ), 
 	),
+	'image_hover'  => array(
+		'label'   => __( 'Image Hover effect', 'fw' ),
+		'desc'    => __( 'Add a mouse hover effect to the image', 'fw' ),
+		'type'    => 'select',
+		'choices' => array(
+			'no'      => __('No', 'fw'),
+			'yes' => __( 'Yes, slightly increase the image size', 'fw' ),
+		)
+	),
+	'image_alignment'  => array(
+		'label'   => __( 'Image Alignment', 'fw' ),
+		'desc'    => __( 'Choose here, how to align your image', 'fw' ),
+		'type'    => 'select',
+		'choices' => array(
+			'aligncenter'      => __('Center', 'fw'),
+			'alignright' => __( 'Right', 'fw' ),
+			'alignleft' => __( 'Left', 'fw' ),
+			'alignnone' => __( 'No Alignment', 'fw' ),
+		)
+	),
 	'size'             => array(
 		'type'    => 'group',
 		'options' => array(

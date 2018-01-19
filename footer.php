@@ -43,15 +43,6 @@
 	<a href="#page" id="scrollToTop" class="scroll" title="Back to Top"><i class="fa fa-angle-up white" aria-hidden="true"></i></a>
 <?php endif;?>
 </div><!-- #page -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11469389-8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-11469389-8');
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 <script>
   WebFont.load({

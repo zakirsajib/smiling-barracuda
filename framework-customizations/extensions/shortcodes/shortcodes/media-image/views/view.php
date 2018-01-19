@@ -21,12 +21,14 @@ if ( ! empty( $width ) && ! empty( $height ) ) {
 	$class = $atts['image_class'];
 }
 
+$image_alignment = !empty($atts['image_alignment']) ? "{$atts['image_alignment']}" : '';
+
 $alt = get_post_meta($atts['image']['attachment_id'], '_wp_attachment_image_alt', true);
 
 $img_attributes = array(
 	'src' => $image,
 	'alt' => $alt ? $alt : $image,
-	'class'	=> $class,
+	'class'	=> $class .' '. $image_alignment,
 );
 
 if(!empty($width)){
@@ -44,12 +46,14 @@ if ( ! empty( $atts['margin'] ) ) {
 	$section_style = 'style="' . esc_attr($margin) . '"';
 }
 
+$img_hover = !empty($atts['image_hover']) ? "{$atts['image_hover']}" : '';
+
 if ( empty( $atts['link'] ) ) {
-	echo '<div '.$section_style.' >';
+	echo '<div class="fw-image-hover '.$img_hover.'" '.$section_style.' >';
 	echo fw_html_tag('img', $img_attributes);
 	echo '</div>';
 } else {
-	echo '<div '. $section_style.' >';
+	echo '<div class="fw-image-hover '.$img_hover.'" '. $section_style.' >';
 	echo fw_html_tag('a', array(
 		'href' => $atts['link'],
 		'target' => $atts['target']

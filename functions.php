@@ -236,13 +236,16 @@ add_filter( 'upload_mimes', 'wpcontent_svg_mime_type' );
 /**
 * Change the Login Logo
 */
-function my_login_logo() { ?>
+function my_login_logo() { 
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+	$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	if(!empty($image)):
+?>
     <style type="text/css">
         #login{padding: 1% 0 0!important;}
-        
         #login h1 a, 
         .login h1 a {
-            background-image: url('<?php echo get_template_directory_uri()?>/images/barracuda-logo-full.png');
+            background-image: url('<?php echo $image[0]?>');
             width: auto;
             height: 140px;
             background-size: contain;
@@ -254,5 +257,5 @@ function my_login_logo() { ?>
 	        box-shadow: none;
         }
     </style>
-<?php }
+<?php endif;}
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
