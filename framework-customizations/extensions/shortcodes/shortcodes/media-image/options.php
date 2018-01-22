@@ -30,11 +30,11 @@ $options = array(
 		)
 	),
 	'image_alignment'  => array(
-		'label'   => __( 'Image Alignment', 'fw' ),
+		'label'   => __( 'Alignment', 'fw' ),
 		'desc'    => __( 'Choose here, how to align your image', 'fw' ),
 		'type'    => 'select',
 		'choices' => array(
-			'aligncenter'      => __('Center', 'fw'),
+			'aligncenter'	=> __('Center', 'fw'),
 			'alignright' => __( 'Right', 'fw' ),
 			'alignleft' => __( 'Left', 'fw' ),
 			'alignnone' => __( 'No Alignment', 'fw' ),

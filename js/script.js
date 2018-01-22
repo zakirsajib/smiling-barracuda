@@ -63,7 +63,24 @@ $(function ($) {
 			$('html, body').animate({scrollTop : 0},800);
 			return false;
 		});
+		
+		
+		/* Blog masonry layout */
+	    var $masonry = $('.blog-style-grid').isotope({
+	        itemSelector: '.post-item',
+	        columnWidth: 0,
+	        gutter: 0,
+	    }).isotope('reloadItems');
+	    //$masonry.imagesLoaded( function() {
+	    //    $masonry.isotope('layout').css( 'opacity', 1 );
+	    //});
+	    $(window).load(function (){
+	        setTimeout(function(){
+	            $masonry.isotope('layout');
+	        }, 0);
+	    });
 
     });
+    
     
 });

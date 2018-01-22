@@ -35,27 +35,38 @@ if ( ! empty( $atts['section_id'] ) ) {
 }
 
 $background_position ='';
-if ( ! empty( $atts['background_position'] ) ) {
-	$background_position = 'background-position:' . $atts['background_position'] . ';';
-}
-
 $background_repeat ='';
-if ( ! empty( $atts['background_repeat'] ) ) {
-	$background_repeat = 'background-repeat:' . $atts['background_repeat'] . ';';
-}
-
 $background_size ='';
-if ( ! empty( $atts['background_size'] ) ) {
-	$background_size = 'background-size:' . $atts['background_size'] . ';';
-}
+if ( ! empty( $atts['background_image'] )):
+	
+	if ( ! empty( $atts['background_position'] ) ) {
+	$background_position = 'background-position:' . $atts['background_position'] . ';';
+	}
+	
+	if ( ! empty( $atts['background_repeat'] ) ) {
+		$background_repeat = 'background-repeat:' . $atts['background_repeat'] . ';';
+	}
+	
+	if ( ! empty( $atts['background_size'] ) ) {
+		$background_size = 'background-size:' . $atts['background_size'] . ';';
+	}
+endif;
 
 $background_height ='';
 if ( ! empty( $atts['background_height'] ) ) {
 	$background_height = 'height:' . $atts['background_height'] . ';';
 }
+$padding ='';
+if ( ! empty( $atts['padding'] ) ) {
+	$padding = 'padding:' . $atts['padding'] . ';';
+}
+$margin ='';
+if ( ! empty( $atts['margin'] ) ) {
+	$margin = 'margin:' . $atts['margin'] . ';';
+}
 
 
-$section_style   = ( $bg_color || $bg_image ) ? 'style="' . esc_attr($bg_color . $bg_image . $background_position . $background_repeat . $background_size . $background_height) . '"' : '';
+$section_style   = 'style="' . esc_attr($bg_color . $bg_image . $background_position . $background_repeat . $background_size . $background_height . $padding . $margin) . '"';
 $container_class = ( isset( $atts['is_fullwidth'] ) && $atts['is_fullwidth'] ) ? 'fw-container-fluid' : 'fw-container';
 ?>
 <section class="fw-main-row <?php echo esc_attr($section_extra_classes) ?>" <?php echo $section_style; ?> <?php echo $bg_video_data_attr; ?> id="<?php echo esc_attr($section_id_name) ?>">

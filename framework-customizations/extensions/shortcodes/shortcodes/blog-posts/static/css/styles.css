@@ -1,0 +1,100 @@
+.sh-recent-posts.sh-recent-posts-columns2 .blog-style-grid article,
+.sh-recent-posts.sh-recent-posts-columns2 .blog-style-largeimage article {
+    float: left;
+    width: 50.0%;
+    margin-bottom: 45px;
+}
+.sh-recent-posts.sh-recent-posts-columns4 .blog-style-grid article,
+.sh-recent-posts.sh-recent-posts-columns4 .blog-style-largeimage article {
+    float: left;
+    width: 25.0%;
+    margin-bottom: 45px;
+}
+.grid .post-item .post-container {
+    transition: 0.3s all ease-in-out;
+    bottom: 0;
+}
+.post-container {
+    margin: 0 15px;
+    position: relative;
+}
+.post-meta-thumb {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-height: 700px;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.post-meta-thumb img {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 0px;
+}
+.blog-style-grid .post-item:not(.format-quote):not(.format-link) .post-content-container {
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: 32px;
+    background-color: #fff;
+}
+.blog-style-grid .post-item:hover .post-content-container {
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,0.06);
+}
+.blog-style-grid .post-item .post-content-container {
+    transition: 0.3s all ease-in-out;
+    box-shadow: 0px 15px 45px -9px rgba(0,0,0,0.20);
+}
+.post-content-container {
+    position: relative;
+}
+.blog-style-grid .post-meta {
+    font-size: 12px;
+}
+.blog-style-grid .post-meta-one {
+    margin-bottom: 0px;
+}
+.blog-style-grid .post-title h2 {
+    font-size: 28px;
+    margin-top: 12px;
+    margin-bottom: 14px;
+    line-height: 100%!important;
+    transition: 0.25s all ease;
+}
+.blog-style-grid .post-content {
+    padding-bottom: 28px;
+}
+.blog-style-grid .post-meta-two {
+    margin-left: -18%;
+    margin-right: 92px;
+    padding: 19px 0px 19px 18%;
+    position: relative;
+    font-size: 12px;
+    border-top: 1px solid #e9e9e9;
+}
+.blog-style-grid .post-meta {
+    font-size: 12px;
+}
+
+.post-meta.post-meta-two a {
+    font-size: 13px;
+    text-transform: uppercase;
+}
