@@ -66,7 +66,7 @@ $(function ($) {
 		
 		
 		/* Blog masonry layout */
-	    var $masonry = $('.blog-style-grid').isotope({
+	    var $masonry = $('.blog-style-grid, .blog-style-largeimage').isotope({
 	        itemSelector: '.post-item',
 	        columnWidth: 0,
 	        gutter: 0,
