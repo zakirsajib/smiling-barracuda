@@ -15,7 +15,9 @@ endif;
 	<div class="sh-group blog-list blog-style-<?php echo esc_attr( $style )?>">
 		<?php
 			set_query_var( 'style', $style );
-
+			
+			$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			
 			$categories_query = array();
 			if( isset($atts['categories']) && count($atts['categories']) > 0 ) :
 				$categories_query = $atts['categories'];
@@ -34,12 +36,12 @@ endif;
 			$orderby = ( isset($atts['order_by']) && $atts['order_by'] ) ? esc_attr( $atts['order_by'] ) : 'post_date';
 			$order = ( isset($atts['order']) && $atts['order'] ) ? esc_attr( $atts['order'] ) : 'desc';
 
-			$posts = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => $limit, 'category__in' => $categories_query, 'tag__in' => $tags_query, 'orderby' => $orderby, 'order' => $order ) );
+			$posts = new WP_Query( array( 'post_type' => 'post', 'paged' => $page, 'posts_per_page' => $limit, 'category__in' => $categories_query, 'tag__in' => $tags_query, 'orderby' => $orderby, 'order' => $order ) );
 			if( count($posts) > 0 ) :
 				while ( $posts->have_posts() ) : $posts->the_post();
 					if( $style == 'grid') :?>
 				
-		<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
 		<div class="post-container">
 			<?php //jevelin_popover( jevelin_post_option( get_the_ID(), 'post-popover' ) ); ?>
 
@@ -66,7 +68,8 @@ endif;
 				</a>
 
 				<div class="post-content">
-					<?php echo wp_trim_words( get_the_content() , '45' ); ?>
+					<?php echo wp_trim_words( get_the_content() , '45'); ?>
+					<div class="fw-read-more"><a href="<?php the_permalink()?>">Read More  <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
 				</div>
 
 				<div class="post-meta post-meta-two">
@@ -75,8 +78,8 @@ endif;
 			</div>
 		</div>
 	</article>	
-				<?php elseif( $style == 'largeimage' ) : ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
+					<?php elseif( $style == 'largeimage' ) : ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
 					<div class="post-container">
 						<div class="post-meta-thumb xx">
 							<?php if ( has_post_thumbnail() ) : ?>
@@ -87,11 +90,65 @@ endif;
 						</div>
 					</div>
 				</article>
-				<?php else : ?>
+					<?php elseif( $style == 'classic1' ) : ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
+					<div class="post-container-classic-one">
+						<div class="post-meta-thumb-classic-one">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+							<?php else:?>
+							<a href="<?php echo esc_url( get_permalink() ); ?>"><img src="http://via.placeholder.com/150x150&text=No+Image Found" alt="No Image"></a>
+							<?php endif;?>
+						</div>
+						<div class="post-content-classic-one">
+							<div class="post-meta post-meta-one classic-one">
+								<?php smiling_barracuda_posted_on(); ?>
+							</div><a href="<?php echo esc_url( get_permalink() ); ?>" class="post-title"><h2><?php the_title(); ?></h2></a>
+
+							<div class="post-content classic-one">
+								<?php echo wp_trim_words( get_the_content() , '45' ); ?>
+							</div>
+			
+							<div class="post-meta post-meta-two classic-one">
+								<?php smiling_barracuda_entry_footer();?>
+							</div>
+						</div>
+					</div>
+				</article>
+					<?php elseif( $style == 'classic2' ) : ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
+					<div class="post-container-classic-two">
+						
+							<?php if ( has_post_thumbnail() ) : ?>
+							<div class="post-meta-thumb-classic-two">
+								<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail( 'full' ); ?></a>
+							</div>
+							<?php else:?>
+							<div class="post-meta-thumb-classic-two">
+								<a href="<?php echo esc_url( get_permalink() ); ?>"><img src="http://via.placeholder.com/1000x1000&text=No+Image Found" alt="No Image"></a>
+							</div>
+							<?php endif;?>
+						<div class="post-content-classic-two">
+							<div class="post-meta post-meta-one classic-two">
+								<?php smiling_barracuda_posted_on(); ?>
+							</div><a href="<?php echo esc_url( get_permalink() ); ?>" class="post-title"><h2><?php the_title(); ?></h2></a>
+
+							<div class="post-content classic-two">
+								<?php echo wp_trim_words( get_the_content() , '45' ); ?>
+							</div>
+			
+							<div class="post-meta post-meta-two classic-two">
+								<?php smiling_barracuda_entry_footer();?>
+							</div>
+						</div>
+					</div>
+				</article>
+					<?php else : ?>
 					
-				<?php endif; endwhile;
-				wp_reset_postdata();
+					<?php endif; 
+				endwhile;
 			endif;
 		?>
 	</div>
+	<?php next_posts_link( '<i class="fa fa-long-arrow-down"></i> Older Entries', $posts->max_num_pages );previous_posts_link( '<i class="fa fa-long-arrow-up"></i> Newer Entries' );wp_reset_postdata();?>
 </div>

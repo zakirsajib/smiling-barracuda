@@ -123,7 +123,7 @@ function smiling_barracuda_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
 	wp_enqueue_style( 'hover', get_template_directory_uri() . '/css/hover-min.css');
-	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/style-min.css');
+	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/style.css');
 	wp_enqueue_style( 'blue', get_template_directory_uri() . '/css/blue.css');
 	wp_enqueue_script( 'bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), null,true );
 	wp_enqueue_script( 'matchHeight', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', array('jquery'), null, true );

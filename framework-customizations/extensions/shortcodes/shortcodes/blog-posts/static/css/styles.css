@@ -95,6 +95,58 @@
 }
 
 .post-meta.post-meta-two a {
-    font-size: 13px;
+    font-size: 10px;
+    font-weight: 700;
     text-transform: uppercase;
+}
+
+/*Classic One*/
+.post-container-classic-one{
+	display: flex;
+	padding: 1em 0;
+	border-bottom: 1px solid #e9e9e9;
+}
+.post-meta-thumb-classic-one{
+	flex: 1;
+	order: 1;
+}
+.post-content-classic-one{
+	flex: 5;
+	order: 2;
+}
+.post-content.classic-one {
+    padding: 0 0 1em;
+}
+.post-content-classic-one h2{
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+    padding: 0.5em 0;
+}
+/*Classic Two*/
+.post-container-classic-two{
+	padding: 1em 0;
+	border-bottom: 1px solid #e9e9e9;
+}
+.post-content-classic-two {
+    padding: 1em 0;
+}
+.post-content.classic-two{
+	padding: 0 0 1em;
+}
+.post-content-classic-two h2{
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+    padding: 0.5em 0;
+}
+
+.nav-previous,
+.nav-next{
+	
+}
+
+.fw-read-more{
+	padding: 1em 0;
+	font-size: 12px;
 }

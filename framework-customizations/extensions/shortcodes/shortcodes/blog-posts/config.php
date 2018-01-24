@@ -16,7 +16,11 @@ $cfg = array(
 		        {{ } }}
 
 		        {{ if( typeof o.columns != "undefined" && o.columns ) { }}
-		            {{- o.columns }} columns
+		            {{- o.columns }} columns,
+		        {{ } }}
+		        
+		        {{ if( typeof o.style != "undefined" && o.style ) { }}
+		            Style {{- o.style }}
 		        {{ } }}
 		        
 			</div>',

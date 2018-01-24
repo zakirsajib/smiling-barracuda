@@ -25,17 +25,20 @@ $options = array(
 		'choices' => array(
 			'grid' => esc_html__('Grid', 'jevelin'),
 			'largeimage' => esc_html__('Image only', 'jevelin'),
+			'timeline' => esc_html__('Timeline', 'jevelin'),
+			'classic1' => esc_html__('Classic 1', 'jevelin'),
+			'classic2' => esc_html__('Classic 2', 'jevelin'),
 		)
 	),
 
 	'columns' => array(
 		'type'    => 'radio',
-		'label'   => esc_html__('Columns', 'jevelin'),
-		'desc'  => esc_html__( 'Choose columns count', 'jevelin' ),
+		'label'   => esc_html__('Columns', 'fw'),
+		'desc'  => esc_html__( 'Choose columns count', 'fw' ),
 		'value'	  => '2',
 		'choices' => array(
-			'2' => esc_html__( '2 columns', 'jevelin' ),
-			'4' => esc_html__( '4 columns', 'jevelin' ),
+			'2' => esc_html__( '2 columns (Only applicable to Grid and Image Only style)', 'fw' ),
+			'4' => esc_html__( '4 columns (Only applicable to Grid and Image Only style)', 'fw' ),
 		)
 	),
 
@@ -45,7 +48,7 @@ $options = array(
         'desc'  => esc_html__('Choose which blog categories you want to show', 'jevelin'),
         'population' => 'taxonomy',
         'source' => 'category',
-        'prepopulation' => 10,
+        'prepopulate' => 10,
         'limit' => 100,
     ),
 
@@ -55,7 +58,7 @@ $options = array(
         'desc'  => esc_html__('Choose which blog tags you want to show', 'jevelin'),
         'population' => 'taxonomy',
         'source' => 'post_tag',
-        'prepopulation' => 10,
+        'prepopulate' => 10,
         'limit' => 100,
     ),
 
