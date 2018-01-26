@@ -7,6 +7,20 @@ $(function ($) {
         $(".loader").fadeOut(800);
     });
 
+    /*----navbar-search----*/
+    $('.search-icon').on('click', function () {
+        $('.navbar-search-box').toggleClass("navbar-search-box-open");
+        $(this).toggleClass("actives");
+
+        if($(this).hasClass("actives")){
+            $('.search-icon > i').toggleClass("fa-times");
+            $('.search-icon > i').toggleClass("fa-search");
+        }else {
+            $('.search-icon > i').toggleClass("fa-search");
+            $('.search-icon > i').toggleClass("fa-times");
+        }
+    });
+
     /* ------- Smooth scroll ------- */
     $(".scroll").on("click", function (event) {
         var menu = $("nav.navbar").innerHeight();

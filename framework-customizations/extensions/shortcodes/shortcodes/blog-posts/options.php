@@ -13,21 +13,21 @@ $options = array(
 	        'min' => 1,
 	        'max' => 41,
 	    ),
-	    'label' => esc_html__('Limit posts', 'jevelin'),
-	    'desc'  => esc_html__('Choose post limit. Choose 41 posts to select unlimited posts', 'jevelin'),
+	    'label' => esc_html__('Limit posts', 'fw'),
+	    'desc'  => esc_html__('Choose post limit. Choose 41 posts to select unlimited posts', 'fw'),
 	),
 
 	'style' => array(
 		'type'    => 'radio',
-		'label'   => esc_html__('Style', 'jevelin'),
-		'desc'  => esc_html__( 'Choose main style for recent posts', 'jevelin' ),
+		'label'   => esc_html__('Style', 'fw'),
+		'desc'  => esc_html__( 'Choose main style for recent posts', 'fw' ),
 		'value'	  => 'grid',
 		'choices' => array(
-			'grid' => esc_html__('Grid', 'jevelin'),
-			'largeimage' => esc_html__('Image only', 'jevelin'),
-			'timeline' => esc_html__('Timeline', 'jevelin'),
-			'classic1' => esc_html__('Classic 1', 'jevelin'),
-			'classic2' => esc_html__('Classic 2', 'jevelin'),
+			'grid' => esc_html__('Grid', 'fw'),
+			'largeimage' => esc_html__('Image only', 'fw'),
+			'timeline' => esc_html__('Timeline', 'fw'),
+			'classic1' => esc_html__('Classic 1', 'fw'),
+			'classic2' => esc_html__('Classic 2', 'fw'),
 		)
 	),
 
@@ -44,8 +44,8 @@ $options = array(
 
     'categories' => array(
         'type'  => 'multi-select',
-        'label' => esc_html__('Blog Categories', 'jevelin'),
-        'desc'  => esc_html__('Choose which blog categories you want to show', 'jevelin'),
+        'label' => esc_html__('Blog Categories', 'fw'),
+        'desc'  => esc_html__('Choose which blog categories you want to show', 'fw'),
         'population' => 'taxonomy',
         'source' => 'category',
         'prepopulate' => 10,
@@ -54,8 +54,8 @@ $options = array(
 
 	'tags' => array(
         'type'  => 'multi-select',
-        'label' => esc_html__('Blog Tags', 'jevelin'),
-        'desc'  => esc_html__('Choose which blog tags you want to show', 'jevelin'),
+        'label' => esc_html__('Blog Tags', 'fw'),
+        'desc'  => esc_html__('Choose which blog tags you want to show', 'fw'),
         'population' => 'taxonomy',
         'source' => 'post_tag',
         'prepopulate' => 10,
@@ -64,26 +64,26 @@ $options = array(
 
 	'order_by' => array(
 		'type'    => 'radio',
-		'label'   => esc_html__('Order By', 'jevelin'),
-		'desc'  => esc_html__( 'Choose product order by', 'jevelin' ),
+		'label'   => esc_html__('Order By', 'fw'),
+		'desc'  => esc_html__( 'Choose product order by', 'fw' ),
 		'value'	  => 'date',
 		'choices' => array(
-			'date' => esc_html__('Date', 'jevelin'),
-			'name' => esc_html__('Name', 'jevelin'),
-			'author' => esc_html__('Author', 'jevelin'),
-			'rand' => esc_html__('Random', 'jevelin'),
-			'comment_count' => esc_html__('Comment Count', 'jevelin'),
+			'date' => esc_html__('Date', 'fw'),
+			'name' => esc_html__('Name', 'fw'),
+			'author' => esc_html__('Author', 'fw'),
+			'rand' => esc_html__('Random', 'fw'),
+			'comment_count' => esc_html__('Comment Count', 'fw'),
 		)
 	),
 
 	'order' => array(
 		'type'    => 'radio',
-		'label'   => esc_html__('Order', 'jevelin'),
-		'desc'  => esc_html__( 'Choose product order', 'jevelin' ),
+		'label'   => esc_html__('Order', 'fw'),
+		'desc'  => esc_html__( 'Choose product order', 'fw' ),
 		'value'	  => 'desc',
 		'choices' => array(
-			'asc' => esc_html__('Ascending', 'jevelin'),
-			'desc' => esc_html__('Descending', 'jevelin'),
+			'asc' => esc_html__('Ascending', 'fw'),
+			'desc' => esc_html__('Descending', 'fw'),
 		)
 	),
 

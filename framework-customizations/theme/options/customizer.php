@@ -484,7 +484,7 @@ $options = array(
                 'value' => '14px',
                 'attr'  => array( 'style' => 'max-width: 70px' ),
                 'label' => esc_html__('Navigation Size', 'jevelin'),
-                'desc'  => wp_kses( __( 'Enter your navigation size (with <b>px</b>)', 'jevelin' ), jevelin_allowed_html() ),
+                'desc'  => wp_kses( __( 'Enter your navigation size (with <b>px</b>)', 'jevelin' ), '' ),
             ),
 
             'header_nav_color' => array(

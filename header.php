@@ -45,12 +45,35 @@
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
-                        <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-	                   $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-	                   if(!empty($image)):?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" ><img src="<?php echo $image[0]?>" class="logo-display" alt="<?php bloginfo( 'name' );?>"><img src="<?php echo get_theme_mod('header_logo', 'No Logo has been provided yet.')?>" class="logo-scrolled" alt="<?php bloginfo( 'name' );?>">
-                        </a><?php endif;?>
+	                   <?php if ( function_exists('fw_get_db_settings_option') ):?>
+	                   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="navbar-brand"><img src="<?php echo fw_get_db_settings_option('logo')['url']?>" alt="<?php bloginfo( 'name' );?>" class="logo-display"><img src="<?php echo fw_get_db_settings_option('logo_sticky')['url']?>" class="logo-scrolled" alt="<?php bloginfo( 'name' );?>">
+	                   </a>
+	                   <?php else:
+	                   		get_option( 'blogname' );
+	                   endif;?>	                                                                 
                     </div>
+                    
+                    <div class="navbar-search-box-icon" data-aos="fade-down">
+                        <a href="#" class="search-icon scroll">
+	                        <i class="fa fa-search"> </i>
+	                    </a>
+                    </div>
+                    
+                    
+                    <?php 
+	                    
+	                    //$data = fw_get_db_settings_option();
+
+						// or even refer to individual options, for performance's sake
+						//$individual_option = fw_get_db_settings_option('logo');
+						
+						//echo $individual_option['url'];
+						
+						//fw_print($data);
+						//fw_print($individual_option);
+	                    
+	                    
+	                     ?>
                     <?php
 			            wp_nav_menu( array(
 			                'menu'              => 'primary',
@@ -60,6 +83,23 @@
 			                'container_id'		=>	'navbar-menu'
 			            ));
 			        ?>
+			        
+			        <div class="navbar-search-box" id="search-box">
+                        <div class="navbar-search-box-data">
+                            <form>
+                                <input type="search" placeholder="type keyword(s) here" class="form-control" id="search">
+                                <div class="navbar-search-box-button">
+                                    <a href="#." class="btn button-blue page-buttons button">
+                                        Search
+                                    </a>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+			        
+			        
+			        
                 </div>
             </nav>
         <!--Header ends-->

@@ -2,9 +2,9 @@
 
 $cfg = array(
 	'page_builder' => array(
-		'title'       => esc_html__( 'Blog Posts', 'jevelin' ),
-		'description' => esc_html__( 'Add a Blog Posts', 'jevelin' ),
-		'tab'         => esc_html__( 'Content Elements', 'jevelin' ),
+		'title'       => esc_html__( 'Blog Posts', 'fw' ),
+		'description' => esc_html__( 'Add a Blog Posts', 'fw' ),
+		'tab'         => esc_html__( 'Content Elements', 'fw' ),
 		'popup_size'  => 'medium',
 		'icon' => 'dashicons dashicons-welcome-write-blog',
         'title_template' => '

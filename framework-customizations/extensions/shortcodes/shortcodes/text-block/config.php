@@ -2,9 +2,9 @@
 
 $cfg = array(
 	'page_builder' => array(
-		'title'       => '   ' . esc_html__( 'Text Block', 'jevelin' ),
-		'description' => esc_html__( 'Add a Text Block', 'jevelin' ),
-		'tab'         => esc_html__( 'Content Elements', 'jevelin' ),
+		'title'       => '   ' . esc_html__( 'Text Block', 'fw' ),
+		'description' => esc_html__( 'Add a Text Block', 'fw' ),
+		'tab'         => esc_html__( 'Content Elements', 'fw' ),
 		'popup_size'  => 'medium',
         'title_template' => '
         	<b>{{= title }}</b>

@@ -1356,20 +1356,30 @@ section#programme h2 {
     color: #fff;
 }
 
-::-moz-placeholder {
-    color: #fff !important;
+.nf-form-wrap.ninja-forms-form-wrap ::-moz-placeholder{
+	color: #fff;
+}
+.nf-form-wrap.ninja-forms-form-wrap :-moz-placeholder{
+	color: #fff;
+}
+.nf-form-wrap.ninja-forms-form-wrap ::-webkit-input-placeholder{
+	color: #fff;
+}
+.nf-form-wrap.ninja-forms-form-wrap :-ms-input-placeholder {
+    color: #fff;
 }
 
-:-moz-placeholder {
-    color: #fff !important;
+.navbar-search-box-data ::-moz-placeholder{
+	color: #515a5f;
 }
-
-::-webkit-input-placeholder {
-    color: #fff !important;
+.navbar-search-box-data :-moz-placeholder{
+	color: #515a5f;
 }
-
-:-ms-input-placeholder {
-    color: #fff !important;
+.navbar-search-box-data ::-webkit-input-placeholder{
+	color: #515a5f;
+}
+.navbar-search-box-data :-ms-input-placeholder {
+    color: #515a5f;
 }
 
 textarea {
@@ -1718,6 +1728,7 @@ p.comment-notes {
 @media (min-width:768px) {
     .navbar-right {
         float: right!important;
+        margin-right: 60px;
     }
     #homeform .navbar-right {
         margin-right: 0;
@@ -1761,7 +1772,7 @@ p.comment-notes {
     .office-location .address .p3 {
         font-size: 1.5rem;
         line-height: 2rem;
-    
+    }
     .homebarracuda-club h2 {
         margin: 0 0 2.5em;
     }
