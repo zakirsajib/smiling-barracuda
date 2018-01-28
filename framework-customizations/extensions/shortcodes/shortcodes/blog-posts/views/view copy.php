@@ -9,7 +9,7 @@ $elements = jevelin_option( 'post_elements' );
 
 $class = '';
 $class2 = '';
-if( isset( $atts['columns'] ) && $atts['columns'] == 2 ) :
+if( isset( $atts['columns'] ) && $atts['columns'] == 5 ) :
 	$class = ' sh-recent-posts-columns'.$atts['columns'];
 endif;
 

@@ -6,10 +6,10 @@
     "autoprefixer": "postcss -u autoprefixer -r static/dist/css/*",
     "scss": "node-sass --output-style compressed -o static/dist/css static/src/scss",
     "lint": "eslint static/src/js",
-    "uglify": "mkdir -p static/dist/js && uglifyjs static/src/js/*.js -m -o static/dist/js/app.js && uglifyjs static/src/js/*.js -m -c -o static/dist/js/app.min.js",
+    "uglify": "mkdir -p static/dist/js && uglifyjs node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js node_modules/jquery-match-height/dist/jquery.matchHeight-min.js static/src/js/*.js js/*.js -m -o static/dist/js/app.js && uglifyjs node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js node_modules/jquery-match-height/dist/jquery.matchHeight-min.js static/src/js/*.js js/*.js -m -c -o static/dist/js/app.min.js",
     "imagemin": "imagemin static/src/img static/dist/img -p",
     "build:css": "npm run scss && npm run autoprefixer",
-    "build:js": "npm run lint && npm run uglify",
+    "build:js": "npm run uglify",
     "build:images": "npm run imagemin",
     "build:all": "npm run build:css && npm run build:js && npm run build:images",
     "watch:css": "onchange 'static/src/scss/*.scss' -- npm run build:css",
@@ -26,15 +26,15 @@
     "node-sass": "latest",
     "onchange": "latest",
     "parallelshell": "latest",
-    "uglify-js": "latest",
     "postcss-cli": "latest",
     "touch": "latest",
+    "uglify-js": "latest",
     "bootstrap-sass": "latest",
     "font-awesome-sass": "latest",
     "jquery-match-height": "latest"
   },
-  "dependencies":{
-	"bootstrap-sass": "latest",
+  "dependencies": {
+    "bootstrap-sass": "latest",
     "font-awesome-sass": "latest",
     "jquery-match-height": "latest"
   }
