@@ -23,6 +23,20 @@ body {
   text-align: right;
 }
 
+.ias-trigger.ias-trigger-prev{
+	margin-bottom: 5em;
+	a{
+		padding: 1em;
+		border: 1px solid #ccc;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+.ias-spinner{
+	padding: 1em;
+	margin-bottom: 5em;
+}
+
 .background-position {
   background: no-repeat fixed center;
   background-size: cover;

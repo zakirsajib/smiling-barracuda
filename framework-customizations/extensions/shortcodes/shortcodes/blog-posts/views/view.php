@@ -60,11 +60,7 @@ endif;
 					<?php smiling_barracuda_posted_on(); //jevelin_meta_one(); ?>
 				</div>
 
-				<a href="<?php echo esc_url( get_permalink() ); ?>" class="post-title">
-					<h2>
-						<?php //jevelin_sticky_post(); ?>
-						<?php the_title(); ?>
-					</h2>
+				<a href="<?php echo esc_url( get_permalink() ); ?>" class="post-title"><h2><?php //jevelin_sticky_post(); ?><?php the_title(); ?></h2>
 				</a>
 
 				<div class="post-content">
@@ -133,8 +129,7 @@ endif;
 								<?php smiling_barracuda_posted_on(); ?>
 							</div><a href="<?php echo esc_url( get_permalink() ); ?>" class="post-title"><h2><?php the_title(); ?></h2></a>
 
-							<div class="post-content classic-two">
-								<?php echo wp_trim_words( get_the_content() , '45' ); ?>
+							<div class="post-content classic-two"><?php echo wp_trim_words( get_the_content() , '45' ); ?>
 							</div>
 			
 							<div class="post-meta post-meta-two classic-two">
@@ -150,5 +145,26 @@ endif;
 			endif;
 		?>
 	</div>
-	<?php next_posts_link( '<i class="fa fa-long-arrow-down"></i> Older Entries', $posts->max_num_pages );previous_posts_link( '<i class="fa fa-long-arrow-up"></i> Newer Entries' );wp_reset_postdata();?>
+	
+	<div class="page-load-status">
+	  <div class="loader-ellips infinite-scroll-request">
+	    <span class="loader-ellips__dot"></span>
+	    <span class="loader-ellips__dot"></span>
+	    <span class="loader-ellips__dot"></span>
+	    <span class="loader-ellips__dot"></span>
+	  </div>
+	  <p class="infinite-scroll-last">End of content</p>
+	  <p class="infinite-scroll-error">No more pages to load</p>
+	</div>
+	
+	<!-- hide pagination with infinite scroll enabled -->
+	<div class="navigation">
+		<?php //if( get_next_posts_link() ) :?>
+			<div class="next"><?php echo get_next_posts_link( '<i class="fa fa-long-arrow-down"></i> Older Entries', $posts->max_num_pages );?></div>
+		<?php //endif;?>
+		<?php //if( get_previous_posts_link() ) :?>
+			<div class="prev"><?php echo get_previous_posts_link( '<i class="fa fa-long-arrow-up"></i> Newer Entries' );?></div>
+		<?php //endif;?>
+	</div>
+	<?php wp_reset_postdata();?>
 </div>

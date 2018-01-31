@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<div class="post-container">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -29,9 +29,7 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
 	<?php smiling_barracuda_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -53,8 +51,9 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
 	<footer class="entry-footer">
 		<?php smiling_barracuda_entry_footer(); ?>
+		<?php if ( comments_open() || get_comments_number() ) : comments_template(); endif;?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>

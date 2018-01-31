@@ -6,4 +6,6 @@ wp_enqueue_style(
 	wp_enqueue_script(
 	'fw-shortcode-blog-posts-isotope', get_template_directory_uri() . '/framework-customizations/extensions/shortcodes/shortcodes/blog-posts/static/js/isotope.pkgd.min.js');
 	wp_enqueue_script(
+	'fw-shortcode-blog-posts-ias', get_template_directory_uri() . '/framework-customizations/extensions/shortcodes/shortcodes/blog-posts/static/js/infinite-scroll.pkgd.min.js');
+	wp_enqueue_script(
 	'fw-shortcode-custom-blog-posts-isotope', get_template_directory_uri() . '/framework-customizations/extensions/shortcodes/shortcodes/blog-posts/static/js/custom.js');

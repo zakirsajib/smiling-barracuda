@@ -46,7 +46,7 @@ if(!function_exists('smiling_barracuda_shortcode_text_block_css')) :
 
 			$custom_css = ob_get_contents(); 
 			ob_end_clean();
-			wp_add_inline_style( 'main',smiling_barracuda_compress($custom_css));
+			wp_add_inline_style( 'smiling-barracuda-main',smiling_barracuda_compress($custom_css));
 		
 	}
 	add_action('fw_ext_shortcodes_enqueue_static:text_block','smiling_barracuda_shortcode_text_block_css');
